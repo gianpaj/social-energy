@@ -1,0 +1,38 @@
+extends layout
+
+block append stylesheets
+  link(href='/webfonts/ss-social-circle.css', rel='stylesheet')
+  != css('workless')
+  != css('event')
+
+block content
+  header
+    #header-outer
+      a(href="/") Home
+      nav
+        ul
+          li#about About
+          li#schedule Schedule
+          li#contact Contact
+          li#faq FAQ
+        #social
+          a.ss-icon.ss-facebook
+          a.ss-icon.ss-twitter
+  #welcome-image
+
+  #about-section
+    h1 About
+    p Things are super awesome because other things happened and things ;like that it's pretty great hahah good one that's awesome
+
+  #schedule-section
+  #contact-section
+  #faq-section
+
+  footer
+
+block append javascripts
+  != js('jquery')
+  != js('modernizr')
+  != js('plugins')
+  != js('application')
+  != js('event')

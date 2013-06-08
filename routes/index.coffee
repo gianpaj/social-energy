@@ -1,6 +1,6 @@
 
 index = (req, res) ->
-  res.render 'index', title: 'hello'
+  res.render 'event', title: 'hello'
 
 exports.init = (app) ->
   app.get '/', index

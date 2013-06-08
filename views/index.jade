@@ -2,10 +2,20 @@ extends layout
 
 block append stylesheets
   != css('workless')
+  != css('landing')
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+  #main-signup
+    #signup-form
+      input#signup-input.green(type="text", placeholder="Email Address")
+      button#signup-btn.button.green(type="button") Sign Up!
+
+  footer
 
 block append javascripts
+  != js('jquery')
+  != js('modernizr')
+  != js('plugins')
   != js('application')
+  != js('landing')

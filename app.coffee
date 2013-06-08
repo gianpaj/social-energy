@@ -22,6 +22,7 @@ app.configure ->
   app.use express.session({'appleby on the rocks'})
   app.use app.router
   app.use require('connect-assets')()
+  app.use require('stylus')()
   app.use(express.static(path.join(__dirname, 'public')))
 
 # initialize our router
