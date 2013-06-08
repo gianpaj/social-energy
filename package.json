@@ -1,14 +1,16 @@
 {
-  "name": "application-name",
+  "name": "social-energy",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node bin/run-server.js"
   },
   "dependencies": {
+    "coffee-script": "1.6.3",
     "express": "3.2.6",
     "jade": "0.31.2",
     "connect-assets": "2.4.3",
-    "async": "0.2.9"
+    "async": "0.2.9",
+    "mongoose": "*"
   }
 }

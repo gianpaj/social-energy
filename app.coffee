@@ -21,6 +21,7 @@ app.configure ->
   app.use express.cookieParser('ricarious omnibus underwater')
   app.use express.session({'appleby on the rocks'})
   app.use app.router
+  app.use require('connect-assets')()
   app.use(express.static(path.join(__dirname, 'public')))
 
 # initialize our router
