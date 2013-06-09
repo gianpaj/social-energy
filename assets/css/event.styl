@@ -19,13 +19,24 @@ body
 
   header
     margin: 0 auto
-    height: 60px
+    height: 80px
     background-color: #FFF
-    border-top: 5px solid rgba(63,167,87,1)
+    border-top: 5px solid #46B252
     border-bottom: 2px solid #777
     position: fixed
     width: 100%
     z-index: 999
+
+    a#home
+      display: block
+      text-indent: -9999px
+      background-image: url("/images/social-energy.png")
+      background-repeat: no-repeat
+      background-size: 80%
+      height: 100%
+      width: 100px
+      margin-left: 50px
+      margin-top: 5px
 
     nav
       ul
@@ -44,8 +55,8 @@ body
           transition: color .25s ease-in-out
 
           float: left
-          margin: 5px 10px
-          padding: 5px 10px
+          margin: 10px 10px
+          padding: 10px 10px
 
           &:hover
             //opacity: 1
@@ -56,7 +67,7 @@ body
         float: left
         position: absolute
         right: 40px
-        top: 19px
+        top: 30px
 
         a
           color: #111
@@ -86,11 +97,9 @@ body
     margin-top: 0
     overflow:hidden
 
-
     h1
       position: absolute
       color: #111111
-      //background-color: #FFB300
       background-color: #FFF
       margin: 100px auto
       right: 50px
@@ -128,15 +137,8 @@ body
     h2
       font-size: 3.0em
 
-    .box
-      float: left
-      width: 440px
-      margin: auto 25px
-
-      h3
-        color: #AAA
-        font-weight: 100
-        margin: 30px
+    p
+      margin: 50px 100px
 
   .quote
     width: 600px
@@ -176,46 +178,86 @@ body
   section
     h1
       color: #BBB
-      text-align: center
-      width: 600px
-      margin: -10px auto 50px auto
-      padding-bottom: 10px
+      text-align: left
+      width: 1000px
+      margin: 0 auto
+      padding 60px
 
       -webkit-text-shadow: -2px 2px #111
       -moz-text-shadow: -2px 2px #111
       -o-text-shadow: -2px 2px #111
       text-shadow: -2px 2px #111
 
-
-
   p
     color: #DDD
-    margin: 50px 100px
+
     font-weight: 100
     font-size: 1.3em
     letter-spacing: 0.15em
 
   #about-section
     background: url('/images/navy_blue.png') repeat
-    height: 1000px
     margin-top: -5px
     padding: 100px
 
-    .box
-      background-color: rgb(17,17,22)
-      opacity: 0.7
-      border: 1px solid rgb(37, 37, 52)
+    .outer-box
+      width: 1100px
+      margin: 30px auto
+
+      .box
+        background-color: rgb(17,17,22)
+        opacity: 0.7
+        border: 1px solid rgb(37, 37, 52)
+        width: 500px
+        margin: 10px 20px
+        p
+          margin: 30px
 
   #schedule-section
-    background-color: #FFAA00
-    height: 1000px
+    //background-color: #FFAA00
+    //height: 1000px
 
   #contact-section
-    background-color: #FF4119
-    height: 1000px
+    //background-color: #FF4119
+    //height: 1000px
+
+  #signup-form
+    display: block
+    position: relative
+    margin: -50px auto
+
+    width: 870px
+    opacity: 0.9
+    background-color: #222
+
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    -o-border-radius: 5px
+    border-radius: 5px
+
+    p
+      width: 400px
+      float: left
+      margin: 10px 20px
+      padding-right: 20px
+      border-right: 1px solid #444
+
+    button
+      margin: 10px 10px 12px
+      width: 100px
+      height: 40px
+
+    input
+      margin: 15px 10px
+      width: 245px
+      height: 20px
+      font-size: 1.1em
 
   footer
     background-color: #111
     height: 300px
+
+  .clear
+    clear: both
 
 

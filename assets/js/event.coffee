@@ -8,5 +8,3 @@ $ ->
 
 jump = (src, target) ->
   $(src).click -> $.scrollTo $(target).offset().top - 60, 500
-
-getTweets = -> console.log 'hello'

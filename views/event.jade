@@ -2,12 +2,13 @@ extends layout
 
 block append stylesheets
   link(href='/webfonts/ss-social-circle.css', rel='stylesheet')
+  link(href='/webfonts/ss-standard.css', rel='stylesheet')
   != css('workless')
   != css('event')
 
 block content
   header
-    a(href="/") Home
+    a#home(href="/") Home
     nav
       ul
         li#about About
@@ -15,27 +16,57 @@ block content
         li#contact Contact
         li#faq FAQ
       #social
-        a.ss-icon.ss-facebook
-        a.ss-icon.ss-twitter
+        a.ss-icon.ss-social-circle.ss-facebook(href="https://www.facebook.com/socialenergylive")
+        a.ss-icon.ss-social-circle.ss-twitter(href="https://www.twitter.com/_socialenergy")
 
   #welcome-image
-    h1 Skills...not bills.
+    h1 Use your powers for good.
+
   section#about-section
 
-    h1 What is Social Energy?
+    #signup-form
+      p Be the first to know when we're ready to kick things off!
+      input#signup-input.green(type="text", placeholder="Email Address")
+      button#signup-btn.button.green(type="button") Sign Up!
 
-    .container
-      p Social Energy is a non-profit organisation that connects some of the best digital brains with local charities lacking in resources and skills.
-      h2 jasdklfjalsdk
+    section#what-is.clear
+      h1 What is Social Energy?
 
-    .quote
-      blockquote "Join the movement and spend 48 hours collaborating with social and technology innovators and help charities in a way they have never been helped before."
-        cite Your Subconcious Mind
+      .container
+        p Social Energy is a non-profit organisation that connects some of the best digital brains with local charities lacking in resources and skills.
 
+      .quote
+        blockquote "Join the movement and spend 48 hours collaborating with social and technology innovators and help charities in a way they have never been helped before."
+          cite Your Subconcious Mind
 
-  section#schedule-section
-  section#contact-section
-  section#faq-section
+    section#benefits
+      h1.clear Benefits
+      .outer-box
+        .box.one_half
+          p
+            span.ss-icon.ss-user
+            | Awesome social benefit
+          p
+            span.ss-icon.ss-globe
+            | Awesome global benefit
+        .box.one_half.last
+          p
+            span.ss-icon.ss-user
+            | Awesome social benefit
+          p
+            span.ss-icon.ss-globe
+            | Awesome global benefit
+
+    section#banner
+
+    section#schedule-section
+      h1 Schedule
+      h2 TBD
+
+    section#contact-section
+      h1 Contact
+      h2 TBD
+    section#faq-section
 
   footer
 
