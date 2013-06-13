@@ -20,14 +20,18 @@ block content
         a.ss-icon.ss-social-circle.ss-twitter(href="https://www.twitter.com/_socialenergy")
 
   #welcome-image
-    h1 Use your powers for good.
+    //h1 Use your powers for good.
 
+
+
+  #signup-form
+    p Be the first to know when we're ready to kick things off!
+    input#signup-input(type="text", placeholder="Email Address")
+    button#signup-btn.button(type="button") Sign Up!
+  p#signup-error
+
+  #mission-statement
   section#about-section
-
-    #signup-form
-      p Be the first to know when we're ready to kick things off!
-      input#signup-input.green(type="text", placeholder="Email Address")
-      button#signup-btn.button.green(type="button") Sign Up!
 
     section#what-is.clear
       h1 What is Social Energy?
@@ -59,14 +63,16 @@ block content
 
     section#banner
 
-    section#schedule-section
+    //section#schedule-section
       h1 Schedule
       h2 TBD
 
-    section#contact-section
+    //section#contact-section
       h1 Contact
       h2 TBD
     section#faq-section
+
+  #bottom-stats
 
   footer
 

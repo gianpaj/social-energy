@@ -2,7 +2,7 @@ mongoose = require 'mongoose'
 exports.Signup = require('./signupModel').Signup
 
 exports.init = (app) ->
-  mongoose.connect 'mongodb://localhost/socialenergy'
+  mongoose.connect "mongodb://localhost/social_energy"
   db = mongoose.connection
   db.on 'error', console.error.bind(console, 'connection error:')
   db.on 'open', ->

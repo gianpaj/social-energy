@@ -4,4 +4,4 @@ _          = require 'underscore'
 SignupSchema = mongoose.Schema
   email: { type: String, required: true, index: { unique: true } }
 
-exports.Signup = mongoose.model 'Client', SignupSchema
+exports.Signup = mongoose.model 'Signup', SignupSchema
