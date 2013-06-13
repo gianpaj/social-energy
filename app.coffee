@@ -9,7 +9,9 @@ models = require './models'
 
 app = express()
 
-app.set 'port', process.env.PORT || 3000
+port = if process.env.NODE_ENV == 'production' then 80 else 3000
+
+app.set 'port', process.env.PORT || port
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 
