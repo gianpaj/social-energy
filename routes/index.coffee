@@ -7,8 +7,14 @@ signup = (req, res) ->
   email = req.param 'email'
   su = new models.Signup email: email
   su.save (err) ->
-    return res.json 400, err: err if err
-    res.json result: 'success'
+    if err
+      # if mongodb returns E11000 duplicate key error index
+      if err.code == 11000
+        res.json result: 'duplicate-email'
+      else
+        return res.json err: err
+    else
+      res.json result: 'success'
 
 exports.init = (app) ->
   app.get '/', index
