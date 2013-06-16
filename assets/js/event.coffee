@@ -8,13 +8,17 @@ $ ->
 
   $('#signup-btn').click ->
     $('#signup-error').removeClass('success').removeClass('error')
+  email = $('#signup-input').val()
     $.ajax
       url: '/signup'
       type: 'POST'
       data:
-        email: $('#signup-input').val()
-      success: ->
+        email: email
+      success: (data) ->
         $('#signup-input').text('')
+        if data.result == 'duplicate-email'
+          $('#signup-error').addClass('success').text('We already have you in the system. Thanks for signing up (again) :)')
+        else
         $('#signup-error').addClass('success').text('Thanks! We will let you know when everything is ready to go!')
       error: ->
         $('#signup-error').addClass('error').text('There was a problem sending your email! Try back in a little while.')
