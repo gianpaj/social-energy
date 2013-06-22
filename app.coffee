@@ -6,6 +6,7 @@ path = require 'path'
 
 # local depencendies
 models = require './models'
+services = require './services'
 
 app = express()
 
@@ -28,11 +29,9 @@ app.configure ->
   app.use require('stylus')()
   app.use(express.static(path.join(__dirname, 'public')))
 
-# initialize our router
 routes.init app
-
-# initialize models
 models.init app
+services.init app
 
 # development only
 if 'development' == app.get('env')

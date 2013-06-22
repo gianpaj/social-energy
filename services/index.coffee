@@ -1,3 +1,4 @@
+emailer = require './emailService'
 
 exports.init = (app) ->
-  console.log 'hello'
+  emailer.init()

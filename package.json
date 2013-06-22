@@ -13,6 +13,8 @@
     "async": "0.2.9",
     "mongoose": "3.6.11",
     "underscore": "1.4.4",
-    "stylus": "0.32.1"
+    "stylus": "0.32.1",
+    "nodemailer": "0.4.4",
+    "mailchimp": "1.1.0"
   }
 }

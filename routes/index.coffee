@@ -1,12 +1,23 @@
 models = require '../models'
+emailer = require '../services/emailService'
+
+async = require 'async'
 
 index = (req, res) ->
   res.render 'event', title: 'Social Energy'
 
 signup = (req, res) ->
   email = req.param 'email'
-  su = new models.Signup email: email
-  su.save (err) ->
+
+  jobs = [
+    (cb) ->
+      su = new models.Signup email: email
+      su.save cb
+    (cb) ->
+      emailer.subscribe email, cb
+  ]
+
+  async.parallel jobs, (err) ->
     if err
       # if mongodb returns E11000 duplicate key error index
       if err.code == 11000
