@@ -37,6 +37,15 @@
       margin: 10px 10px 12px
       width: 100px
       height: 40px
+      color: #FFF
+      background-color: rgb(40, 148, 52)
+
+      &:hover
+        background-color: rgb(60, 168, 72)
+
+      &:active
+        color: rgb(70, 178, 82)
+        background-color: rgb(255, 255, 255)
 
     input
       margin: 15px 10px
@@ -46,9 +55,21 @@
 
 header
   margin: 0 auto
-  height: 50px
-  background-color: #111
+  padding-top: 10px
+  height: 85px
+  background-color: #222
   //border-top: 5px solid rgba(63,167,87,1)
+  //border-bottom: 2px solid #111
+
+  a#home
+    display: block
+    text-indent: -9999px
+    background-image: url("/images/social-energy.png")
+    background-repeat: no-repeat
+    background-size: 80%
+    height: 100%
+    width: 100px
+    margin-left: 50px
 
 footer
   height: 200px
